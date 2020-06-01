@@ -1,0 +1,74 @@
+.header
+  .header__logo
+    -# =image_tag ("logo.png"), size: "300x35"
+    
+  .header__nav
+    %ul.header__nav__menu
+      %li.header__nav__menu__item
+        = link_to "#about" do
+          About
+      %li.header__nav__menu__item
+        = link_to "#works" do
+          新着スポット
+      %li.header__nav__menu__item
+        = link_to "#skill" do
+          新規登録
+      %li.header__nav__menu__item
+        = link_to "#contact" do
+          ログイン
+
+      
+.main__visual
+  .main__visual__content
+    %h2.main__visual__content__title
+      Table Tennis Spot
+    -# %p.main__visual__content__text
+    -#   Web Engineer
+  .main__visual__introduction
+    卓球できる場所と仲間を探しましょう
+
+.content
+  %ul.content__list
+    %li#about.content__list__item
+      About
+      .content__list__item--text
+        Table Tennis Spotは気軽に卓球が楽しめるスポットをシェアするプラットフォームです。
+    %li#works.content__list__item
+      Works
+      .content__list__item--card-wrapper
+        .card
+          .card-caption
+            .card-caption-title
+              ポートフォリオ
+            .card-caption-info
+              自分自身のポートフォリオです
+            .card-caption-info
+              Rails/HTML/CSS
+            .card-caption-url
+              
+        .card
+          .card-caption
+            .card-caption-title
+              ポートフォリオ
+            .card-caption-info
+              自分自身のポートフォリオです
+            .card-caption-info
+              Rails/HTML/CSS
+            .card-caption-url
+        .card
+          .card-caption
+            .card-caption-title
+              ポートフォリオ
+            .card-caption-info
+              自分自身のポートフォリオです
+            .card-caption-info
+              Rails/HTML/CSS
+            .card-caption-url
+        
+
+
+
+    %li#contact.content__list__item
+      Contact
+.footer
+  .footer__copyright
