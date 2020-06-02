@@ -1,0 +1,98 @@
+.user-info-wrapper{
+  padding: 20px 0;
+  font-size: 14px;
+  background:#000033;
+  min-height: 100vh;
+  &__logo{
+    
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    
+    &--link{
+      text-decoration: none;
+    }
+
+  }
+  &__main{
+    width: 700px;
+    padding: 20px;
+    margin: 80px auto 80px;
+    margin-bottom: 1px;
+    background-color: white;
+    &__head{
+      text-align: center;
+      font-size: 22px;
+      // font-weight: bold;
+      &--back{
+        color: #62A6E6;
+      }
+    }
+    &__btn{
+      width: 300px;
+      height: 44px;
+      display: block;
+      color: white;
+      font-size: 14px;
+      line-height: 44px;
+      margin: 10px auto;
+      border: 0px solid #000;
+      text-align: center;
+      background:#000033;
+    }
+    &__text{
+      width: 295px;
+      height: 44px;
+      display: block;
+
+      font-size: 14px;
+      line-height: 44px;
+      margin: 10px auto;
+      // border-radius: 4px;
+      padding-left: 10px;
+    }
+    .flexbox{
+      display: flex;
+      align-items: center;
+    }
+    .text-half{
+      width: 140px;
+    }
+    &__title{
+      width: 300px;
+      margin: 0 auto;
+      font-weight: bold;
+      .must{
+        padding: 3px;
+        color: white;
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: #ea352d;;
+      }
+
+    }
+    .text-align-center{
+      text-align: center;
+      font-weight: normal;
+    }
+    &__select{
+      width: 300px;
+      height: 44px;
+      font-size: 12px;
+      line-height: 44px;
+      margin: 10px auto;
+      border-radius: 4px;
+      padding-left: 10px;
+      background-color: #fff;
+    }
+    .three-select{
+      width: 80px;
+    }
+    &__caution{
+      padding: 10px 0;
+      width: 300px;
+      margin: 0 auto;
+      color: gray;
+    }
+  }
+}

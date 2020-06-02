@@ -1,0 +1,14 @@
+.login-wrapper
+  .login-wrapper__logo
+    -# = link_to root_path do
+    -#   = image_tag asset_path("logo.png"), size: "185x49"
+
+  .login-wrapper__main
+    アカウントをお持ちでない方はこちら
+    = link_to new_user_registration_path, class: "login-wrapper__main__btn" do
+      新規会員登録
+  .login-wrapper__main
+    = form_with model:resource, url: session_path(resource_name), local: true do |f|
+      = f.text_field :email, {class: "user-info-wrapper__main__text",placeholder: "メールアドレス"}
+      = f.password_field :password, {class: "user-info-wrapper__main__text",placeholder: "パスワード"}
+      = f.submit "ログイン", {class: "user-info-wrapper__main__btn"}

@@ -1,0 +1,56 @@
+.login-wrapper{
+  padding: 20px 0;
+  font-size: 14px;
+  background:#000033;
+  min-height: 100vh;
+  text-align: center;
+  
+  &__logo{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  &__main{
+
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    background-color: white;
+
+    &__head{
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    &__btn{
+      width: 300px;
+      height: 44px;
+      display: block;
+      color: white;
+      font-size: 14px;
+      line-height: 44px;
+      margin: 10px auto;
+      border: 0px solid #000;
+      text-align: center;
+      background:#000033;
+      text-decoration: none;
+
+    }
+
+    &__text{
+      width: 300px;
+      height: 44px;
+      display: block;
+      font-size: 14px;
+      line-height: 44px;
+      margin: 10px auto;
+      // border-radius: 1px;
+      padding-left: 10px;
+    }
+
+
+  }
+}
