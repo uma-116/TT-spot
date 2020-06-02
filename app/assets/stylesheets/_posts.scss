@@ -1,9 +1,8 @@
 body{
   background:#000033;
   font-family: 'MV Boil';
-  
   line-height: 1;
-}
+
 
 .header {
   background:#000033;
@@ -21,6 +20,7 @@ body{
   
   &__logo{
     font-size: 34px;
+    margin-top: 18px;
     margin-left: 20px;
     
   }
@@ -45,18 +45,20 @@ body{
   // max-height: 800px;
   // overflow: hidden;
   height: 800px;
-  background-image: image-url("table-tennis.jpg");
+  background-image: image-url("table-tennis-place.jpg");
   background-size: cover;
   display: flex;
   &__content {
-    width: 800px;
-    // margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 200px 0 0 30px;
     &__title {
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-family: Tahoma;
         font-size: 60px;
         line-height: 1.2;
         color: #fff;
+        margin-left: 250px;
     }
     &__text {
       width: calc(100%-800px);
@@ -88,16 +90,20 @@ body{
   &__list{
     &__item{
       padding-top: 120px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
+      font-weight: bold;
       &--text{
         font-size: 20px;
+        font-weight: normal;
       }
       &--card-wrapper{
         font-size: 17px;
+        font-weight: normal;
         padding: 20px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-bottom: 150px;
         .card{
           color: black;
           position: relative;
@@ -105,7 +111,7 @@ body{
           flex-direction: column;
           min-width: 0;
           word-wrap: break-word;
-          background-color: #fff;
+          background: #f3f1f1;
           background-clip: border-box;
           border: 1px solid rgba(0,0,0,.125);
           border-radius: .25rem;
@@ -119,8 +125,53 @@ body{
 }
 
 .footer{
-  height: 100px;
-  background: #333;
-  padding: 80px 0;
+  height: 150px;
+  background: #1a1a1a;
+  padding: 20px 0;
   margin: 0 auto;
+  text-align: center;
+  &__contents {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #1a1a1a;
+    &__content {
+      display: flex;
+      background: #1a1a1a;
+      flex-direction: column;
+      // width: calc(1 / 3 * 100%);
+      margin: 20px 2% 0 50px;
+      &__head {
+        color: #fff;
+        // margin: 0 0 20px;
+        font-size: 16px;
+               
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 32px;
+        display: block;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  &__log {
+    color: #fff;
+    background: #1a1a1a;
+    // max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 5px;
+  }
+  p {
+    font-size: 14px;
+  }
+} 
+
 }

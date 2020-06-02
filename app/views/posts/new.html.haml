@@ -1,0 +1,46 @@
+.content
+  .content__main 
+    = form_with model: @post, local: true do |f|
+      -# = render 'layouts/error_messages', model: f.object
+
+      .content__main__item-image-box
+        .text-bold
+          写真
+          %span.required
+            必須
+        最大10枚までアップロードできます
+        -# %br
+        -# #image-box
+        -#   #previews
+        -#     - if @post.persisted?
+        -#       = @post.images.each_with_index do |image, i|
+        -#         = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
+        -#   = f.fields_for :images do |image|
+        -#     %div{data: { index: "#{image.index}" }, class: "review-file_group" }
+        -#       = image.file_field :img, class: "item-file"
+        -#       %br
+        -#         %span.preview-remove
+        -#           削除
+        -#     - if @post.persisted?
+        -#       = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+      .content__main__item-name-box
+        .text-bold
+          スポット名
+          %span.required
+            必須
+        = f.text_field :name, class:"content__main__item-name-box__item-name-field", placeholder: "40文字まで", maxlength: 40
+        .text-bold
+          概要
+          %span.required
+            必須
+        = f.text_area :content, class:"content__main__item-name-box__item-exp-field", placeholder: "例）〇〇駅から徒歩××分", maxlength: 1000
+          
+ 
+      .content__main__botton-box
+        = f.submit "投稿する", class: "content__main__botton-box__send-botton"
+        -# = f.submit "下書きに保存", class: "content__main__botton-box__draft-botton"
+        = link_to root_path, class: "content__main__botton-box__draft-botton", id: "back-btn" do
+          もどる
+
+    .content__main__warning-box
+      禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
