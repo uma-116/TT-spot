@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
 
   def index
+    @posts = Post.all
   end
 
   def move_to_index
