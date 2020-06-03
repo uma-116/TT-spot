@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :name, :content, :image, presence: true
+  validates :name, :content, presence: true
 
   has_many :comments, dependent: :destroy
   has_many :images, dependent: :destroy

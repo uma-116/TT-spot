@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    # @post.images.new
+    @post.images.new
   end
 
   def create
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if @post.save
       # redirect_to root_path
     else
-      # @item.images.new
+      @item.images.new
       render :new
     end
   end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name, :content, :image)
+    params.require(:post).permit(:name, :content, images_attributes: [:img,:_destroy,:id])
   end
   
 end
