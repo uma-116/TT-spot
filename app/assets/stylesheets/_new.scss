@@ -45,10 +45,11 @@ $main-border-bottom: 1px solid grey;
 .content {
   background:#000033;
 
+
   &__main{
     background:#000033;
     width: 700px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 24px 40px 40px;
     color: white;
 
@@ -210,14 +211,14 @@ $main-border-bottom: 1px solid grey;
 
       &__send-botton{
         color: #ffffff;
-        background-color: #3CCACE;
+        background-color: #0066CC;
         width: 50%;
         line-height: 55px;
         font-size: 19px;
         font-weight: bold;
         border: $main-border-bottom;
         margin: 0 auto 20px;
-        border-radius: 30px;
+        border-radius: 2px;
         border: none;
         cursor: pointer;
         cursor: hand;
@@ -225,13 +226,14 @@ $main-border-bottom: 1px solid grey;
 
       &__draft-botton{
         background-color: #f5f5f5;
+        color: #0066CC;
         width: 50%;
         line-height: 55px;
         font-size: 18px;
         font-weight: bold;
         border: 1px solid;
         margin: 0 auto;
-        border-radius: 30px;
+        border-radius: 2px;
         border: none;
         cursor: pointer;
         cursor: hand;
