@@ -1,0 +1,34 @@
+.header
+  .header__logo
+    = link_to root_path do
+      =image_tag ("Table Tennis Spot-logo.png"), size: "300x80"
+      
+    
+  .header__nav
+    %ul.header__nav__menu
+      -if user_signed_in?
+        %li.header__nav__menu__item
+          = link_to "#about" do
+            About
+        %li.header__nav__menu__item
+          = link_to "#works" do
+            新着スポット
+        %li.header__nav__menu__item
+          = link_to destroy_user_session_path, method: :delete do
+            ログアウト
+        %li.header__nav__menu__item
+          = link_to "#" do
+            マイページ
+      -else
+        %li.header__nav__menu__item
+          = link_to "#about" do
+            About
+        %li.header__nav__menu__item
+          = link_to "#works" do
+            新着スポット
+        %li.header__nav__menu__item
+          = link_to new_user_session_path do
+            ログイン
+        %li.header__nav__menu__item
+          = link_to new_user_registration_path do
+            新規登録

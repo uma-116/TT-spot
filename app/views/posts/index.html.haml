@@ -1,45 +1,9 @@
-.header
-  .header__logo
-    =image_tag ("Table Tennis Spot-logo.png"), size: "300x80"
-    
-  .header__nav
-    %ul.header__nav__menu
-      -if user_signed_in?
-        %li.header__nav__menu__item
-          = link_to "#about" do
-            About
-        %li.header__nav__menu__item
-          = link_to "#works" do
-            新着スポット
-        %li.header__nav__menu__item
-          = link_to destroy_user_session_path, method: :delete do
-            ログアウト
-        %li.header__nav__menu__item
-          = link_to "#" do
-            マイページ
-      -else
-        %li.header__nav__menu__item
-          = link_to "#about" do
-            About
-        %li.header__nav__menu__item
-          = link_to "#works" do
-            新着スポット
-        %li.header__nav__menu__item
-          = link_to new_user_session_path do
-            ログイン
-        %li.header__nav__menu__item
-          = link_to new_user_registration_path do
-            新規登録
-
+=render "header"
       
 .main__visual
   .main__visual__content
     %h2.main__visual__content__title
       Find your place for having fun.
-    -# %p.main__visual__content__text
-    -#   Web Engineer
-  -# .main__visual__introduction
-  -#   卓球できる場所と仲間を探しましょう！
 
 .content
   %ul.content__list
@@ -52,54 +16,15 @@
       .content__list__item--card-wrapper
         -@posts.each do |post|
           .card
-            .card-caption
-              .card-caption-title
-                ="#{post.name}"
-              .card-caption-info
-                =image_tag post.images.find_by(post_id: post.id).img_url, size: "238x150"
-              .card-caption-info
-                ="#{post.content}"
-              .card-caption-url
+            = link_to post_path(post.id) do
+              .card-caption
+                .card-caption-title
+                  ="#{post.name}"
+                .card-caption-info
+                  =image_tag post.images.find_by(post_id: post.id).img_url, size: "238x150"
+                .card-caption-info
+                  ="#{post.content}"
+                .card-caption-url
               
-        -# .card
-        -#   .card-caption
-        -#     .card-caption-title
-        -#       バグース新宿店
-        -#     .card-caption-info
-        -#       =image_tag ("bagus-shinjuku.jpg"), size: "238x150"
-        -#     .card-caption-info
-        -#       新宿駅から徒歩8分
-        -#     .card-caption-url
-        -# .card
-        -#   .card-caption
-        -#     .card-caption-title
-        -#       THE RALLY TABLE
-        -#     .card-caption-info
-        -#       =image_tag ("rallytable.jpg"), size: "238x150"
-        -#     .card-caption-info
-        -#       渋谷駅から徒歩5分
-        -#     .card-caption-url
-        
-.footer
-  %ul.footer__contents
-    %li.footer__contents__content
-      %h2.footer__contents__content__head
-        このサイトについて
 
-    %li.footer__contents__content       
-      %h2.footer__contents__content__head
-        企画運営
-
-    %li.footer__contents__content        
-      %h2.footer__contents__content__head
-        利用規約
- 
-    %li.footer__contents__content        
-      %h2.footer__contents__content__head
-        プライバシーポリシー                              
-  
-  .footer__log
-    = link_to "#" do
-      -# = image_tag asset_path("logo-white.svg"), size: "160x47", alt: "ICON" 
-    %p
-      ©2020 Table Tennis Spot All Rights Reserved.
+=render "footer"        

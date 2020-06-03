@@ -1,3 +1,8 @@
+.header
+  .header__logo
+    = link_to root_path do
+      =image_tag ("Table Tennis Spot-logo.png"), size: "300x80"
+
 = form_with model: @user,url: user_registration_path, local: true do |f|
 
   .user-info-wrapper
@@ -7,26 +12,26 @@
       -#   =render "devise/shared/error_messages", resource: resource
     .user-info-wrapper__main
       .user-info-wrapper__main__head
-        新規会員登録
+        新規ユーザー登録
     .user-info-wrapper__main
       .user-info-wrapper__main__title
         ニックネーム
-        %span{class: "must"} 必須
+
       = f.text_field :nickname, {class: "user-info-wrapper__main__text", placeholder: "例)ピンポン太郎"}
 
       .user-info-wrapper__main__title
         メールアドレス
-        %span{class: "must"} 必須
+
       = f.text_field :email, {class: "user-info-wrapper__main__text", placeholder: "PC・携帯どちらでも可"}
 
       .user-info-wrapper__main__title
         パスワード
-        %span{class: "must"} 必須
+ 
       = f.password_field :password, {class: "user-info-wrapper__main__text", placeholder: "7文字以上の半角英数字"}
       
       .user-info-wrapper__main__title
         パスワード(確認)
-        %span{class: "must"} 必須
+  
       = f.password_field :password_confirmation, {class: "user-info-wrapper__main__text", placeholder: "7文字以上の半角英数字"}
       
       -# .user-info-wrapper__main__title
