@@ -1,12 +1,13 @@
 = render "header"
 .body
-  .detail-box
-    .detail-box__title
-      詳細
-    .detail-box__image
-      =image_tag ("shibutaku.jpg"), size: "400x300"
+  .main
+    .detail-box
+      .detail-box__title
+        = @post.name
+      .detail-box__image
+        =image_tag @post.images.find_by(post_id: @post.id).img_url, size: "400x300"
 
-    .detail-box__content
-      渋谷駅から徒歩5分です。
+      .detail-box__content
+        =@post.content
 
 = render "footer"

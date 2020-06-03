@@ -56,12 +56,12 @@ $main-border-bottom: 1px solid grey;
     &__item-image-box{
       font-size: 14px;
       padding-bottom: $main-padding-bottom;
-      border-bottom: $main-border-bottom;
+      // border-bottom: $main-border-bottom;
     }
 
     &__item-name-box{
       padding: $main-padding;
-      border-bottom: $main-border-bottom;
+      // border-bottom: $main-border-bottom;
 
       &__item-name-field{
         width: 100%;
@@ -81,7 +81,7 @@ $main-border-bottom: 1px solid grey;
 
     &__item-info-box{
       padding: $main-padding;
-      border-bottom: $main-border-bottom;
+      // border-bottom: $main-border-bottom;
 
       &__headline{
         margin-bottom: 10px;
@@ -111,7 +111,7 @@ $main-border-bottom: 1px solid grey;
   
     &__delivery-box{
       padding: $main-padding;
-      border-bottom: $main-border-bottom;
+      // border-bottom: $main-border-bottom;
 
       &__headline{
         margin-bottom: 10px;
@@ -140,7 +140,7 @@ $main-border-bottom: 1px solid grey;
 
     &__price-box{
       padding: $main-padding;
-      border-bottom: $main-border-bottom;
+      // border-bottom: $main-border-bottom;
 
       &__headline{
         margin-bottom: 10px;
@@ -204,7 +204,7 @@ $main-border-bottom: 1px solid grey;
 
     &__botton-box{
       padding: $main-padding;
-      border-bottom: $main-border-bottom;
+      // border-bottom: $main-border-bottom;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -216,7 +216,7 @@ $main-border-bottom: 1px solid grey;
         line-height: 55px;
         font-size: 19px;
         font-weight: bold;
-        border: $main-border-bottom;
+        // border: $main-border-bottom;
         margin: 0 auto 20px;
         border-radius: 2px;
         border: none;

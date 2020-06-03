@@ -1,7 +1,9 @@
 .login-wrapper{
   padding: 150px 0;
   font-size: 14px;
-  background:#000033;
+  // background:#000033;
+  background-image: image-url("table-tennis-place.jpg");
+  background-size: cover;
   min-height: 100vh;
   text-align: center;
   
@@ -17,7 +19,7 @@
     padding: 20px;
     margin: 0 auto;
     // margin-bottom: 1px;
-    background-color: #222222;
+    background-color: #888888;
     color: white;
 
     &__head{

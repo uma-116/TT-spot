@@ -8,17 +8,15 @@
     %ul.header__nav__menu
       -if user_signed_in?
         %li.header__nav__menu__item
-          = link_to "#about" do
-            About
+          = link_to new_post_path do
+            投稿する 
         %li.header__nav__menu__item
-          = link_to "#works" do
-            新着スポット
+          = link_to "#" do
+            マイページ    
         %li.header__nav__menu__item
           = link_to destroy_user_session_path, method: :delete do
             ログアウト
-        %li.header__nav__menu__item
-          = link_to "#" do
-            マイページ
+
       -else
         %li.header__nav__menu__item
           = link_to "#about" do
