@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all
+    
+    @posts = Post.limit(3).order('created_at DESC')
   end
 
   def new
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      # redirect_to root_path
+      redirect_to root_path
     else
       @item.images.new
       render :new
