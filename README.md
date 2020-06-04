@@ -1,6 +1,6 @@
 # Table Tennis Spot概要
 Table Tennis Spotは、カジュアルに卓球が楽しめる場所を共有するアプリケーションです。
-![サンプル](TT-spot.png)
+![サンプル](TT-spot.jpg)
 
 
 # DB設計
