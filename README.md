@@ -4,6 +4,13 @@ Table Tennis Spotは、カジュアルに卓球が楽しめる場所を共有す
 
 ![サンプル](TT-spot2.jpg)
 
+## 本番環境
+https://ttspot.herokuapp.com/
+
+## テストユーザー
+メールアドレス： pingpong@gmail.com
+パスワード： test1234
+
 # DB設計
 
 ## usersテーブル
