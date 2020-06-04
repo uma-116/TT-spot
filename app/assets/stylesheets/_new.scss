@@ -36,8 +36,8 @@ a{
 
 $form-font-size: 18px;
 $form-padding: 5px;
-$main-padding: 40px 0 ;
-$main-padding-bottom: 40px;
+$main-padding: 30px 0 ;
+$main-padding-bottom: 30px;
 $main-border-bottom: 1px solid grey;
 
 
@@ -47,20 +47,22 @@ $main-border-bottom: 1px solid grey;
 
 
   &__main{
-    background:#000033;
+    background: #888888;
     width: 700px;
+    height: calc(100vh-100px);
     margin: 0 auto;
     padding: 24px 40px 40px;
     color: white;
 
     &__item-image-box{
       font-size: 14px;
-      padding-bottom: $main-padding-bottom;
-      // border-bottom: $main-border-bottom;
+      // padding-bottom: $main-padding-bottom;
+      // // border-bottom: $main-border-bottom;
+      padding-top: 20px;
     }
 
     &__item-name-box{
-      padding: $main-padding;
+      // padding: $main-padding;
       // border-bottom: $main-border-bottom;
 
       &__item-name-field{
@@ -73,7 +75,7 @@ $main-border-bottom: 1px solid grey;
 
       &__item-exp-field{
         width: 100%;
-        height: 200px;
+        height: 100px;
         font-size: $form-font-size;
         padding: $form-padding;
       }    
@@ -117,104 +119,24 @@ $main-border-bottom: 1px solid grey;
         margin-bottom: 10px;
       }
 
-      &__delivery-fee{
-        width: 100%;
-        height: 40px;
-        font-size: $form-font-size;
-        margin-bottom: 20px;
-      }
-
-      &__area{
-        width: 100%;
-        height: 40px;
-        font-size: $form-font-size;
-        margin-bottom: 20px;
-      }
-
-      &__days{
-        width: 100%;
-        height: 40px;
-        font-size: $form-font-size;
-      }
     }
 
-    &__price-box{
-      padding: $main-padding;
-      // border-bottom: $main-border-bottom;
-
-      &__headline{
-        margin-bottom: 10px;
-      }
-
-      &__inner{
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-between;
-
-        &__left-box{
-          width: 50%;
-        }
-
-        &__right-box{
-          width: 50%;
-
-          &__price{
-            width: 100%;
-            height: 40px;
-            text-align: right;
-            padding: $form-padding; 
-          }
-        }
-      }
-
-      &__fee-inner{
-        width: 100%;
-        height: 40px;
-        margin-bottom: 20px;
-        line-height: 40px;
-        display: flex;
-        justify-content: space-between;
-
-        &__left{
-          // 未定
-        }
-
-        &__right{
-          font-size: 18px;
-        }
-      }
-      
-      &__profit-inner{
-        width: 100%;
-        height: 40px;
-        line-height: 40px;
-        display: flex;
-        justify-content: space-between;
-
-        &__left{
-          // 未定
-        }
-
-        &__right{
-          font-size: 20px;
-        }
-      }
-      
-      }  
 
     &__botton-box{
-      padding: $main-padding;
+      padding-top: 40px;
+      // padding: $main-padding;
       // border-bottom: $main-border-bottom;
       text-align: center;
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
 
       &__send-botton{
         color: #ffffff;
-        background-color: #0066CC;
-        width: 50%;
+        background:#000033;
+        width: 30%;
+        
         line-height: 55px;
-        font-size: 19px;
+        font-size: 15px;
         font-weight: bold;
         // border: $main-border-bottom;
         margin: 0 auto 20px;
@@ -226,10 +148,11 @@ $main-border-bottom: 1px solid grey;
 
       &__draft-botton{
         background-color: #f5f5f5;
-        color: #0066CC;
-        width: 50%;
+        color: #000033;
+        height: 55px;
+        width: 30%;
         line-height: 55px;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bold;
         border: 1px solid;
         margin: 0 auto;
@@ -244,64 +167,5 @@ $main-border-bottom: 1px solid grey;
       }
     }
 
-    &__warning-box{
-      font-size: 10px;
-      padding: 20px 0 ;
-    }
   }
-}
-
-
-// トップページにある商品出品ボタン
-.exhibition-button{
-  color: white;
-  background-color: #3ccace;
-  font-weight: 900;
-  font-size: 18px;
-  width: 120px;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px;
-  &:hover{
-    opacity: 0.9;
-  }
-  &__camera{
-    font-size: 60px;
-  }
-}
-
-// フラッシュメッセージ
-.notifications {
-  color: white;
-  text-align: center;  
-  .notice {
-    font-size: 22px;
-    font-weight: bold;
-    height: 50px;
-    line-height: 55px;
-    background-color: #3CCACE;
-  }
-}
-
-// プレビュー画像
-.image-preview{
-  margin: 10px 10px 10px 0;
-}
-
-.preview-remove{
-  margin: 8px 0 16px 0;
-  padding: 3px;
-  background-color: rgb(240, 236, 236);
-  border: 1px solid;
-  display: inline-block;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.review-file_group{
-  border-bottom: 1px dotted  #d6d4d4;
-  margin-bottom: 10px;
 }

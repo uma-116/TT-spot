@@ -1,3 +1,4 @@
+= render "header"
 .content
   .content__main 
     = form_with model: @post, local: true do |f|
@@ -10,7 +11,7 @@
             必須
         
         #image-box
-          #previews
+          -# #previews
             - if @post.persisted?
               = @post.images.each_with_index do |image, i|
                 = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
@@ -18,8 +19,8 @@
             %div{data: { index: "#{image.index}" }, class: "review-file_group" }
               = image.file_field :img, class: "item-file"
               %br
-                %span.preview-remove
-                  削除
+                -# %span.preview-remove
+                -#   削除
             - if @post.persisted?
               = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
       .content__main__item-name-box
@@ -42,3 +43,4 @@
           もどる
 
     .content__main__warning-box
+= render "footer"
