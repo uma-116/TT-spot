@@ -31,6 +31,11 @@ https://ttspot.herokuapp.com/
 ・スポット投稿  
 ・スポット詳細表示  
 
+## スポット投稿
+
+![サンプル](post.png)  
+
+
 # 実装予定の機能
 ・投稿の編集・削除  
 ・マイページ  
@@ -39,6 +44,7 @@ https://ttspot.herokuapp.com/
 ・ユーザー同士のグループ化  
 
 # DB設計
+画像の投稿機能にはCarrierWaveとMiniMagickを使用しています。また、投稿された画像はAWSのS3に保管されるよう設定しています。
 
 ## usersテーブル
 |Column|Type|Options|
