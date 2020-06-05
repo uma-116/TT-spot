@@ -1,11 +1,13 @@
 = render "header"
 .body
   .main
-    削除が完了しました。
+    .detail-box
+      .detail-box__title
+        削除が完了しました。
 
-  .link
-    = link_to root_path, id: 'index' do
-      トップページに戻る
+      .detail-box__content
+        = link_to root_path, id: 'index' do
+          トップページに戻る
 
 
 
