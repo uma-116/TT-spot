@@ -1,13 +1,21 @@
 = render "header"
 .body
   .main
-    .detail-box
-      .detail-box__title
-        = @post.name
-      .detail-box__image
-        =image_tag @post.images.find_by(post_id: @post.id).img_url, size: "400x300"
+    = form_with model: @post, local: true do |f|
+      .detail-box
+        .detail-box__title
+          = @post.name
+        .detail-box__image
+          =image_tag @post.images.find_by(post_id: @post.id).img_url, size: "400x300"
 
-      .detail-box__content
-        =@post.content
+        .detail-box__content
+          =@post.content
+
+      - if user_signed_in? && current_user.id == @post.user_id
+        .content__main__botton-box
+          = f.submit "編集する", class: "content__main__botton-box__send-botton"
+          -# = f.submit "下書きに保存", class: "content__main__botton-box__draft-botton"
+          = link_to post_path, class: "content__main__botton-box__draft-botton", id: 'destroy', method: :DELETE do
+            削除する
 
 = render "footer"

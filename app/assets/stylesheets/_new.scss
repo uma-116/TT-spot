@@ -128,7 +128,7 @@ $main-border-bottom: 1px solid grey;
       // border-bottom: $main-border-bottom;
       text-align: center;
       display: flex;
-      // flex-direction: column;
+      flex-direction: column;
 
       &__send-botton{
         color: #ffffff;
