@@ -1,0 +1,28 @@
+= render "/posts/header"
+
+.container
+  .container__left
+    .container__left__list
+      設定
+    .container__left__list
+      いいね一覧
+    .container__left__list
+      ログアウト   
+
+  .container__right
+    .container__right__box
+      テストさんの投稿一覧
+      .card
+        -# = link_to "#" do
+        .card__caption
+          .card__caption-title
+            渋卓
+          .card__caption-info
+            =image_tag ("shibutaku.jpg"), size: "150x140"
+          .card__caption-info
+            渋谷から徒歩5分
+          .card-caption-url
+
+
+
+= render "/posts/footer"

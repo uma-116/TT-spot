@@ -1,0 +1,76 @@
+body {
+  font-size: 10px;
+  color: #333;
+  margin: 0 auto;
+  background:#000033;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+header{
+  // position: fixed;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+}
+
+.container{
+  
+    position: relative;
+    width: 1020px;
+    height: 700px;
+    // margin: 40px auto 0;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+    background-color: #888888;
+    height: calc(100vh-100px);
+
+    &__left{
+      
+      width: 280px;
+      margin:120px 40px 0 10px;;
+      &__list{
+        height: 81px;
+        line-height: 81px;
+        padding-left: 16px;
+        margin-bottom: 5px;
+        
+        font-size: 14px;
+        border:1px solid rgb(243, 241, 241);
+      }
+    }  
+
+    &__right{
+      
+      height: 500px;
+      width: 660px;
+      border:1px solid rgb(243, 241, 241);
+      margin-top: 120px;
+
+      &__box{
+        height: 81px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 81px;
+        font-size: 16px;
+        a{
+        color: white;
+        }
+
+        .card{
+          
+          &__caption{
+          width: 300px;
+          height: 300px;
+          }
+
+
+        }
+      }
+
+
+    }
+
+    
+  
+}
