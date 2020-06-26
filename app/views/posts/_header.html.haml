@@ -2,7 +2,11 @@
   .header__logo
     = link_to root_path do
       =image_tag ("Table Tennis Spot-logo.png"), size: "300x80"
-      
+    =form_with url: root_path, local: true, class: "header__search-box", method: :get do |f|
+      .header__search-box
+        = f.text_field :keyword, class: 'header__search-box--text--form', placeholder: 'スポットを探す'
+        = f.button type: :submit, class: "header__search-box--submit-btn" do
+          = image_tag asset_path("icon-search.svg"), size: "20x20", alt: "ICON"  
     
   .header__nav
     %ul.header__nav__menu
