@@ -9,4 +9,9 @@ class Post < ApplicationRecord
     attributes[:img].blank?
   end
 
+  def self.search(search)
+    return Post.all unless search
+    Post.where('test LIKE(?)', "%#{search}%")
+  end
+  
 end
